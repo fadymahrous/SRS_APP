@@ -1,0 +1,327 @@
+2025-04-26 13:53:48,287 - __main__ - ERROR - Database Connection test Passed, Horray ...
+NoneType: None
+2025-04-26 13:55:14,898 - __main__ - INFO - Database Connection test Passed, Horray ...
+2025-04-26 13:58:03,213 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 13:58:03,316 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:02:46,175 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:02:46,283 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:03:04,353 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:03:08,739 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:06:23,660 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:06:34,135 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:08:46,785 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:09:33,464 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:09:39,668 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:13:53,243 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:13:59,118 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:14:30,044 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:14:38,470 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:19:47,615 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:20:08,216 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:29:14,319 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:29:14,495 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:39:30,334 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:40:44,598 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:40:44,701 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:41:06,873 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:41:13,443 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:42:14,851 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:42:19,054 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 14:44:55,826 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 14:45:00,252 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 16:45:44,474 - DBSchema_Handler - ERROR - Configuration file not exist for Details:'databaseconnection'
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\DBSchema_Handler.py", line 21, in __init__
+    self.database_config=config['databaseconnection']
+                         ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 979, in __getitem__
+    raise KeyError(key)
+KeyError: 'databaseconnection'
+2025-04-26 16:46:55,823 - DBSchema_Handler - ERROR - Configuration file not exist for Details:'databaseconnection'
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\DBSchema_Handler.py", line 21, in __init__
+    self.database_config=config['databaseconnection']
+                         ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 979, in __getitem__
+    raise KeyError(key)
+KeyError: 'databaseconnection'
+2025-04-26 16:47:17,372 - DBSchema_Handler - ERROR - Configuration file not exist for Details:'databaseconnection'
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\DBSchema_Handler.py", line 21, in __init__
+    self.database_config=config['databaseconnection']
+                         ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 979, in __getitem__
+    raise KeyError(key)
+KeyError: 'databaseconnection'
+2025-04-26 16:52:44,342 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 16:52:44,431 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 17:05:45,368 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 17:05:45,518 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 17:06:13,599 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 17:07:18,853 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 17:12:09,801 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 17:12:09,893 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 17:24:30,749 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 17:24:30,849 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 17:25:18,237 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 17:25:18,334 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 19:04:19,017 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 19:04:19,116 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 19:20:10,234 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 19:20:10,330 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 20:56:57,233 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 20:56:57,333 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:21:29,967 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 23:21:30,304 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:26:32,614 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 23:26:32,737 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:27,034 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:28:27,036 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:28:27,038 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:27,038 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:28:49,458 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:28:49,460 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:31:30,011 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 23:31:30,114 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:31:33,823 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:31:33,824 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:31:33,825 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:31:33,826 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:33,826 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:31:56,154 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 23:31:56,465 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:31:58,839 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:58,839 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:31:58,839 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:31:58,839 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:58,839 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:31:58,841 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:31:58,842 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:31:58,842 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:34:05,494 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:05,495 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:34:25,194 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:34:25,195 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:25,196 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:34:26,380 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:26,380 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:34:26,380 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:34:26,380 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:26,380 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:26,380 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:34:26,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:34:26,382 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:42:05,069 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 23:42:05,376 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:42:29,378 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:42:29,380 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:42:29,381 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:42:29,382 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:42:29,382 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:42:29,382 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:42:29,382 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:42:29,382 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:44:24,745 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:44:24,746 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:44:24,746 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:44:24,746 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:44:24,746 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:44:24,746 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:46:06,048 - DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-04-26 23:46:06,355 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-26 23:46:28,963 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:46:28,963 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:46:28,963 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:46:28,963 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:46:28,964 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-04-26 23:52:35,954 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:52:35,954 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-04-26 23:52:35,954 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-04-26 23:52:35,954 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:52:35,954 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:36]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_name with data[37:45]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_data with data[46:62]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_name with data[63:68]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_name with data[70:79]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_data with data[80:86]
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-04-26 23:52:35,955 - python_multipart.multipart - DEBUG - Calling on_field_name with data[87:100]
+2025-04-26 23:52:35,956 - python_multipart.multipart - DEBUG - Calling on_field_data with data[101:107]
+2025-04-26 23:52:35,956 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-04-26 23:52:35,956 - python_multipart.multipart - DEBUG - Calling on_end with no data

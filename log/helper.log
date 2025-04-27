@@ -1,0 +1,80 @@
+2025-04-26 16:19:25,636 - Configuration-Logger-help - ERROR - Configuration File not found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:20:27,282 - Configuration-Logger-help - ERROR - Configuration File not config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:20:43,345 - Configuration-Logger-help - ERROR - Configuration File not config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:21:00,476 - Configuration-Logger-help - ERROR - Configuration File not .\config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:21:44,605 - Configuration-Logger-help - ERROR - Configuration File not .\config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:22:03,799 - Configuration-Logger-help - ERROR - Configuration File not config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:22:09,676 - Configuration-Logger-help - ERROR - Configuration File not config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+2025-04-26 16:22:13,265 - Configuration-Logger-help - ERROR - Configuration File not config\config.cfg found, for Details 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\configurationandloggerhandler.py", line 21, in read_configuration
+    config.read_file(configuration_file)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 734, in read_file
+    self._read(f, source)
+  File "C:\Users\fadyz\AppData\Local\Programs\Python\Python311\Lib\configparser.py", line 1037, in _read
+    for lineno, line in enumerate(fp, start=1):
+                        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
