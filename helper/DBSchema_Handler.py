@@ -8,6 +8,8 @@ import logging
 FORMAT="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 logging.basicConfig(filename='log\\app.log', encoding='utf-8', level=logging.DEBUG,format=FORMAT)
 
+"""This Class File can be executed as main, it will build the database schema, and it provides also sqlalchemy engine and MetaData"""
+
 class DBSchema_Handler:
     def __init__(self):
         """Initialize logger"""
@@ -74,6 +76,7 @@ class DBSchema_Handler:
             Column("password",String),
             Column("group_id",Integer,ForeignKey("groups_authority.id")),
             Column("creation_date",TIMESTAMP),
+            Column("status",Integer),
             Column("last_login",TIMESTAMP),
         )
 

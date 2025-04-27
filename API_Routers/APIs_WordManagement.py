@@ -1,6 +1,6 @@
 from fastapi import APIRouter,HTTPException,Query
 from fastapi.responses import JSONResponse
-from DBSchema_Handler import DBSchema_Handler
+from helper.DBSchema_Handler import DBSchema_Handler
 from sqlalchemy import Table,MetaData,select,func,insert,delete
 from sqlalchemy.engine import Result
 from pydantic import BaseModel,EmailStr

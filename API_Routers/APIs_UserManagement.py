@@ -1,15 +1,18 @@
-from fastapi import APIRouter,HTTPException,Query
+from fastapi import APIRouter,HTTPException,Query,Depends
 from fastapi.responses import JSONResponse
-from DBSchema_Handler import DBSchema_Handler
-from sqlalchemy import Table,MetaData,select,func,insert,delete
+from helper.DBSchema_Handler import DBSchema_Handler
+from sqlalchemy import Table,select,func,insert,delete
 from sqlalchemy.engine import Result
 from pydantic import BaseModel,EmailStr
 from datetime import datetime
-import json
+from passlib.hash import pbkdf2_sha256
 from helper.configurationandloggerhandler import ConfigurationAndLoggerHandler
+from API_Routers.APIs_TokenValidator import validate_user_token 
+
+"""Hasing Secret Key to be migrated as os.env"""
+SECRET_KEY="n'L!T:e]lN/C'q1w5#3y[C7u6+X"
 
 """Initiate logger"""
-
 config_and_logger=ConfigurationAndLoggerHandler()
 config=config_and_logger.read_configuration('api.configuration')
 logger=config_and_logger.setup_logger('api-userManagement',config['logsdirectory'])
@@ -20,8 +23,7 @@ router = APIRouter(prefix='/users')
 
 """Database Connections Setup"""
 dbcomp=DBSchema_Handler()
-metadata_obj = MetaData()
-engine=dbcomp.create_alchemy_engine()
+engine,metadata_obj=dbcomp.create_alchemy_engine()
 users_authority = Table("users_authority", metadata_obj, autoload_with=engine)
 
 class user_template(BaseModel):
@@ -29,6 +31,10 @@ class user_template(BaseModel):
     email: EmailStr
     password: str
     group: int=1
+    status:int=0
+
+def hash_password(password):
+    return pbkdf2_sha256.hash(SECRET_KEY+password)
 
 def does_user_exist(username:str,mail:str=None)->bool:
     stmt_user=select(users_authority).where(users_authority.c.username==username)
@@ -61,20 +67,20 @@ async def create_user(item:user_template):
             stmt = select(func.max(users_authority.c.user_id))
             result:Result = conn.execute(stmt)
             max_id = result.scalar()
-            stmt = insert(users_authority).values(user_id=max_id+1 if max_id else 1, username=item.username,email=item.email,password=item.password,group_id=1,creation_date=datetime.now())
+            stmt = insert(users_authority).values(user_id=max_id+1 if max_id else 1, username=item.username,email=item.email,password=hash_password(item.password),group_id=1,creation_date=datetime.now(),status=item.status)
             conn.execute(stmt)
             conn.commit()
-            logger.info('User Created:{item.username}')
+            logger.info(f'User Created:{item.username}')
             return JSONResponse(status_code=200,content={"result":"User Created"})
 
 @router.delete('/userdelete')
-async def delete_user(username:str=Query(...,min_length=3)):
-    if does_user_exist(username):
+async def delete_user(user=Depends(validate_user_token)):
+    if does_user_exist(user.username):
         with engine.connect() as conn:
-            stmt = delete(users_authority).where(username==username)
+            stmt = delete(users_authority).where(users_authority.c.username==user.username)
             conn.execute(stmt)
             conn.commit()
-            logger.info('User Deleted:{username}')
+            logger.info(f'User Deleted:{user.username}')
             return JSONResponse(status_code=200,content={"result":"User Deleted"})
     else:
         raise HTTPException(status_code=404,detail='User not exist')
