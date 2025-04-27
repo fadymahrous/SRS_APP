@@ -19,7 +19,12 @@ class LxmlRAWParser:
             page_header=re.search(r"<title>(.*?)<\/title>",page)
             record_result['word']=page_header.group(1) if page_header else None
             word_meta_data=re.search('(\{\{Deutsch(.*?)\}\})',page,re.DOTALL)
-            record_result['meta']=word_meta_data.group(2) if word_meta_data else None
+            if word_meta_data:
+                record_result['meta']=word_meta_data.group(2)
+            else:
+                word_meta_data=re.search('\{\{Grundformverweis (Konj\|.*?)\}\}',page,re.DOTALL)
+                if word_meta_data:
+                    record_result['meta']=word_meta_data.group(1)
             if None not in record_result.values():
                 allrecords_result.append(copy(record_result))
                 number_of_records+=1

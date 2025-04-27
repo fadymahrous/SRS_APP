@@ -51,16 +51,16 @@ class DBSchema_Handler:
         self.wiktionary_de_data = Table(
             "wiktionary_de_data",
             metadata_obj,
-            Column("id", Integer, primary_key=True),
-            Column("word", String),
+            #Column("id", Integer, primary_key=True),
+            Column("word", String, primary_key=True),
             Column("meta",String),
         )
 
         self.user_words = Table(
             "user_words",
             metadata_obj,
-            Column("user_id", Integer, ForeignKey("user_words.id")),
-            Column("word_id", Integer,ForeignKey("wiktionary_de_data.id")),
+            Column("user_id", Integer, ForeignKey("users_authority.user_id")),
+            Column("word_id", String,ForeignKey("wiktionary_de_data.word")),
             Column("last_seen",Date),
             Column("raised_to_user",Integer),
             Column("quality",Integer)
