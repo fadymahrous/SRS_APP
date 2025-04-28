@@ -5,15 +5,14 @@ from CleanWiktionaryRawLXML import CleanWiktionaryRawLXML
 from API_Routers.APIs_UserManagement import router as router_usermanager
 from API_Routers.APIs_SecureLogin import router as router_securelogin
 from fastapi import Depends, FastAPI
-from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 from typing_extensions import Annotated
+from helper import DBSchema_Handler
 
 class User(BaseModel):
     username: str
     email: str | None = None
     full_name: str | None = None
     disabled: bool | None = None
-
 
 class UserInDB(User):
     hashed_password: str
@@ -23,14 +22,15 @@ app=FastAPI(title="Word Interogation")
 app.include_router(router_usermanager)
 app.include_router(router_securelogin)
 
-
 @app.get("/")
 def read_root():
     return "Server is running."
 
 def main()->None:
-    """Clean Wiktionary data"""
-    ...
+    """Clean Wiktionary data,For time Being i will do it manually"""
+    """Create databse schema and add any msissing table"""
+    db_handle=DBSchema_Handler()
+    db_handle.createschema()
 
 if __name__=='__main__':
     main()

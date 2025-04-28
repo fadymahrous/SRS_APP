@@ -94,7 +94,7 @@ class DBSchema_Handler:
                 conn.commit()
         except Exception as e:
             self.logger.exception(f'Cant add default group to the table, this is normal if the user group already exist for Details: {e}')
-            raise e
+            #raise e
 
 def main()-> None:
     connect_to_db=DBSchema_Handler()
