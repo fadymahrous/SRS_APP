@@ -4,9 +4,10 @@ from fastapi import FastAPI,HTTPException,Request
 from CleanWiktionaryRawLXML import CleanWiktionaryRawLXML
 from API_Routers.APIs_UserManagement import router as router_usermanager
 from API_Routers.APIs_SecureLogin import router as router_securelogin
+from API_Routers.APIs_WordManagement import router as router_wordmanagment
 from fastapi import Depends, FastAPI
 from typing_extensions import Annotated
-from helper import DBSchema_Handler
+from helper.DBSchema_Handler import DBSchema_Handler
 
 class User(BaseModel):
     username: str
@@ -21,6 +22,8 @@ class UserInDB(User):
 app=FastAPI(title="Word Interogation")
 app.include_router(router_usermanager)
 app.include_router(router_securelogin)
+app.include_router(router_wordmanagment)
+
 
 @app.get("/")
 def read_root():

@@ -1,22 +1,119 @@
-2025-04-28 01:06:26,656 - module1 - INFO - This is a log message from module1
-2025-04-28 01:06:26,740 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:10:37,263 - module1 - INFO - This is a log message from module1
-2025-04-28 01:10:37,349 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:10:52,203 - __main__ - INFO - Number of records loaded to the database 478333 in 14.852625608444214 seconds
-2025-04-28 01:12:18,568 - module1 - INFO - This is a log message from module1
-2025-04-28 01:12:18,569 - __main__ - INFO - Data Extraction Started
-2025-04-28 01:13:13,966 - __main__ - INFO - Data Extraction done now dumping to result.json under output directory specefied in Config.cfg
-2025-04-28 01:13:16,086 - __main__ - INFO - whole extraction done using lxml in 57 second for 478333 line.
-2025-04-28 01:13:16,286 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:13:31,577 - __main__ - INFO - Number of records loaded to the database 478333 in 15.290906429290771 seconds
-2025-04-28 01:18:41,006 - module1 - INFO - This is a log message from module1
-2025-04-28 01:18:41,007 - __main__ - INFO - Data Extraction Started
-2025-04-28 01:18:48,919 - __main__ - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:19:20,478 - __main__ - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:20:28,389 - __main__ - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:20:48,542 - __main__ - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:21:33,667 - __main__ - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:21:33,705 - __main__ - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+2025-05-01 00:44:51,240 - module1 - INFO - This is a log message from module1
+2025-05-01 00:44:51,272 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 00:44:51,473 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:44:51,690 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:44:51,903 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:44:52,073 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:45:12,693 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:45:12,727 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 00:45:12,741 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 00:49:45,988 - module1 - INFO - This is a log message from module1
+2025-05-01 00:49:46,016 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 00:49:46,221 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:49:46,396 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:49:46,616 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:49:46,789 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:49:50,951 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:49:50,974 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 00:49:50,988 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 00:50:42,585 - module1 - INFO - This is a log message from module1
+2025-05-01 00:50:42,601 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 00:50:42,720 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:50:42,843 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:50:43,006 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:50:43,128 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:50:43,323 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:50:43,341 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
 DETAIL:  Key (id)=(1) already exists.
 
 [SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
@@ -62,124 +159,879 @@ DETAIL:  Key (id)=(1) already exists.
 [SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
 [parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
-2025-04-28 01:23:35,863 - __main__ - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:23:46,635 - module1 - INFO - This is a log message from module1
-2025-04-28 01:23:46,636 - __main__ - INFO - Data Extraction Started
-2025-04-28 01:24:41,528 - __main__ - INFO - Data Extraction done now dumping to result.json under output directory specefied in Config.cfg
-2025-04-28 01:24:43,414 - __main__ - INFO - whole extraction done using lxml in 56 second for 478333 line.
-2025-04-28 01:24:43,589 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
-2025-04-28 01:25:00,598 - __main__ - INFO - Number of records loaded to the database 478333 in 17.0094256401062 seconds
-2025-04-28 11:12:16,337 - module1 - INFO - This is a log message from module1
-2025-04-28 11:12:16,370 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
-2025-04-28 11:12:37,593 - helper.DBSchema_Handler - ERROR - Database Connection Faile for Deatils:(psycopg2.OperationalError) connection to server at "1.1.1.142", port 5432 failed: Connection timed out (0x0000274C/10060)
-	Is the server running on that host and accepting TCP/IP connections?
+2025-05-01 00:50:43,348 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 00:52:19,117 - module1 - INFO - This is a log message from module1
+2025-05-01 00:52:19,140 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 00:52:19,269 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:52:19,395 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:52:19,522 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:52:19,659 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:52:19,912 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 00:52:19,936 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
 
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
 Traceback (most recent call last):
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
-    self._dbapi_connection = engine.raw_connection()
-                             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 3298, in raw_connection
-    return self.pool.connect()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
-    return _ConnectionFairy._checkout(self)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
-    fairy = _ConnectionRecord.checkout(pool)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
-    rec = pool._do_get()
-          ^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
-    with util.safe_reraise():
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
-    raise exc_value.with_traceback(exc_tb)
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
-    return self._create_connection()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
-    return _ConnectionRecord(self)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
-    self.__connect()
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
-    with util.safe_reraise():
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
-    raise exc_value.with_traceback(exc_tb)
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
-    self.dbapi_connection = connection = pool._invoke_creator(self)
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
-    return dialect.connect(*cargs, **cparams)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
-    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-psycopg2.OperationalError: connection to server at "1.1.1.142", port 5432 failed: Connection timed out (0x0000274C/10060)
-	Is the server running on that host and accepting TCP/IP connections?
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
 
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 41, in create_alchemy_engine
-    with engine.connect() as conn:
-         ^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 3274, in connect
-    return self._connection_cls(self)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 148, in __init__
-    Connection._handle_dbapi_exception_noconnection(
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2439, in _handle_dbapi_exception_noconnection
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
-    self._dbapi_connection = engine.raw_connection()
-                             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 3298, in raw_connection
-    return self.pool.connect()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
-    return _ConnectionFairy._checkout(self)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
-    fairy = _ConnectionRecord.checkout(pool)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
-    rec = pool._do_get()
-          ^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
-    with util.safe_reraise():
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
-    raise exc_value.with_traceback(exc_tb)
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
-    return self._create_connection()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
-    return _ConnectionRecord(self)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
-    self.__connect()
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
-    with util.safe_reraise():
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
-    raise exc_value.with_traceback(exc_tb)
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
-    self.dbapi_connection = connection = pool._invoke_creator(self)
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
-    return dialect.connect(*cargs, **cparams)
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
-    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
-    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "1.1.1.142", port 5432 failed: Connection timed out (0x0000274C/10060)
-	Is the server running on that host and accepting TCP/IP connections?
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
 
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 00:52:19,945 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:13:10,463 - module1 - INFO - This is a log message from module1
+2025-05-01 01:13:10,480 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:13:10,603 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:10,732 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:10,859 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:53,149 - module1 - INFO - This is a log message from module1
+2025-05-01 01:13:53,167 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:13:53,291 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:53,403 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:53,513 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:53,663 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:53,864 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:13:53,882 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:13:53,891 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:14:37,712 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:14:37,712 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-05-01 01:14:37,712 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-05-01 01:14:37,712 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:14:37,712 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:33]
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_name with data[34:42]
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_data with data[43:59]
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:14:37,713 - python_multipart.multipart - DEBUG - Calling on_field_name with data[60:65]
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_name with data[67:76]
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_data with data[77:83]
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_name with data[84:97]
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_data with data[98:104]
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:14:37,714 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-05-01 01:18:43,936 - module1 - INFO - This is a log message from module1
+2025-05-01 01:18:43,965 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:18:44,160 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:18:44,328 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:18:44,530 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:18:44,698 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:18:44,902 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:18:44,925 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:18:44,938 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:23:32,173 - module1 - INFO - This is a log message from module1
+2025-05-01 01:23:32,204 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:23:32,398 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:23:32,575 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:23:32,796 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:23:32,960 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:23:33,178 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:23:33,206 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:23:33,221 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:25:56,627 - module1 - INFO - This is a log message from module1
+2025-05-01 01:25:56,655 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:25:56,848 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:25:57,012 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:25:57,227 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:25:57,404 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:25:57,663 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:25:57,702 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:25:57,716 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:28:54,644 - module1 - INFO - This is a log message from module1
+2025-05-01 01:28:54,671 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:28:54,857 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:28:55,043 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:28:55,252 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:28:55,432 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:28:55,656 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:28:55,681 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:28:55,694 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:30:23,431 - module1 - INFO - This is a log message from module1
+2025-05-01 01:30:23,459 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:30:23,660 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:30:23,833 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:30:24,055 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:30:24,223 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:30:24,433 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:30:24,457 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:30:24,471 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:35:44,393 - module1 - INFO - This is a log message from module1
+2025-05-01 01:35:44,423 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:35:44,650 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:35:44,823 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:35:45,034 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:35:45,195 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:35:45,426 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:35:45,452 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:35:45,465 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:36:44,379 - module1 - INFO - This is a log message from module1
+2025-05-01 01:36:44,408 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:36:44,598 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:36:44,776 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:36:45,015 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:36:45,172 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:36:45,383 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:36:45,405 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:36:45,419 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:38:16,356 - module1 - INFO - This is a log message from module1
+2025-05-01 01:38:16,382 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:38:16,584 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:16,753 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:16,954 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:17,107 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:17,318 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:17,340 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:38:17,355 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:38:44,128 - module1 - INFO - This is a log message from module1
+2025-05-01 01:38:44,157 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:38:44,345 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:44,541 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:44,760 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:44,950 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:50,286 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:38:50,331 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:38:50,343 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:40:39,603 - module1 - INFO - This is a log message from module1
+2025-05-01 01:40:39,622 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:40:39,871 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:40:39,997 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:40:40,127 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:40:40,263 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:40:40,480 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:40:40,513 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 01:40:40,521 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 01:51:45,683 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:51:45,683 - python_multipart.multipart - DEBUG - Calling on_field_name with data[0:10]
+2025-05-01 01:51:45,683 - python_multipart.multipart - DEBUG - Calling on_field_data with data[11:19]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_name with data[20:28]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_data with data[29:33]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_name with data[34:42]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_data with data[43:59]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_name with data[60:65]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_name with data[67:76]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_data with data[77:83]
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_start with no data
+2025-05-01 01:51:45,684 - python_multipart.multipart - DEBUG - Calling on_field_name with data[84:97]
+2025-05-01 01:51:45,685 - python_multipart.multipart - DEBUG - Calling on_field_data with data[98:104]
+2025-05-01 01:51:45,685 - python_multipart.multipart - DEBUG - Calling on_field_end with no data
+2025-05-01 01:51:45,685 - python_multipart.multipart - DEBUG - Calling on_end with no data
+2025-05-01 01:59:41,993 - module1 - INFO - This is a log message from module1
+2025-05-01 01:59:42,011 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 01:59:42,139 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:59:42,309 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:59:42,443 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 01:59:42,572 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:00:10,345 - module1 - INFO - This is a log message from module1
+2025-05-01 02:00:10,362 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 02:00:10,482 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:00:10,639 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:00:10,758 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:00:10,876 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:01:38,706 - module1 - INFO - This is a log message from module1
+2025-05-01 02:01:38,723 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 02:01:38,853 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:01:38,980 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:01:39,088 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:01:39,209 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:01:39,458 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:01:39,486 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 02:01:39,494 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 02:06:08,923 - module1 - INFO - This is a log message from module1
+2025-05-01 02:06:08,941 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 02:06:09,083 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:06:09,202 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:06:09,324 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:06:09,438 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:06:09,595 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:06:09,618 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 02:06:09,627 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-05-01 02:09:08,452 - module1 - INFO - This is a log message from module1
+2025-05-01 02:09:08,470 - passlib.registry - DEBUG - registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+2025-05-01 02:09:08,582 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:09:08,699 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:09:08,818 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:09:08,934 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:09:09,095 - helper.DBSchema_Handler - INFO - Database Connection test Passed, Horray ...
+2025-05-01 02:09:09,110 - helper.DBSchema_Handler - ERROR - Cant add default group to the table, this is normal if the user group already exist for Details: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\helper\DBSchema_Handler.py", line 93, in createschema
+    conn.execute(insert(self.groups_authority).values(id=1, groupname='Default',group_authority=0))
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "groups_authority_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[SQL: INSERT INTO groups_authority (id, groupname, group_authority) VALUES (%(id)s, %(groupname)s, %(group_authority)s)]
+[parameters: {'id': 1, 'groupname': 'Default', 'group_authority': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-01 02:09:09,118 - asyncio - DEBUG - Using proactor: IocpProactor

@@ -30,11 +30,13 @@ To solve this, I decided to build an app based on the **Spaced Repetition System
 - **postgres** for vocabulary storage
 
 ---
+## current Phase
+- Working on wordmanagment API endpoint 
+
 
 ## Future Plans
 - Add a simple frontend for easier vocabulary management
-- Implement spaced repetition logic based on performance
-- Add support for multiple languages
+- Implement spaced repetition logic based on performance using simple SM-2 Algorithm
 
 ---
 

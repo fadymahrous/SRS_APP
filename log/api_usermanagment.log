@@ -24,3 +24,368 @@
 2025-04-27 23:59:21,720 - api-userManagement - INFO - User Created:Fady
 2025-04-27 23:59:29,305 - api-userManagement - INFO - User Created:Jesus
 2025-04-28 00:03:25,128 - api-userManagement - INFO - User Deleted:Fady
+2025-05-01 00:26:51,674 - api-userManagement - INFO - User Created:Fady
+2025-05-01 00:39:05,513 - api-wordManagement - ERROR - Word can be added for the following exception 'method' object does not support the context manager protocol
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 28, in add_word
+    with engine.connect as conn:
+TypeError: 'method' object does not support the context manager protocol
+2025-05-01 00:41:43,840 - api-wordManagement - ERROR - Word can be added for the following exception 'method' object does not support the context manager protocol
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 28, in add_word
+    with engine.connect as conn:
+TypeError: 'method' object does not support the context manager protocol
+2025-05-01 00:43:20,386 - api-wordManagement - ERROR - Word can be added for the following exception 'method' object does not support the context manager protocol
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 28, in add_word
+    with engine.connect as conn:
+TypeError: 'method' object does not support the context manager protocol
+2025-05-01 00:48:20,923 - api-wordManagement - ERROR - Word can be added for the following exception 'method' object does not support the context manager protocol
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 28, in add_word
+    with engine.connect as conn:
+TypeError: 'method' object does not support the context manager protocol
+2025-05-01 00:50:20,688 - api-wordManagement - ERROR - Word can be added for the following exception (psycopg2.ProgrammingError) can't adapt type 'User'
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES (%(user_id)s, %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'user_id': User(username='Fady', group_id=1), 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 0, 50, 13, 108865), 'raised_to_user': datetime.datetime(2025, 5, 1, 0, 50, 13, 108865), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: can't adapt type 'User'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 29, in add_word
+    conn.execute(stmt)
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) can't adapt type 'User'
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES (%(user_id)s, %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'user_id': User(username='Fady', group_id=1), 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 0, 50, 13, 108865), 'raised_to_user': datetime.datetime(2025, 5, 1, 0, 50, 13, 108865), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-05-01 00:50:48,198 - api-wordManagement - ERROR - Word can be added for the following exception (psycopg2.ProgrammingError) can't adapt type 'User'
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES (%(user_id)s, %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'user_id': User(username='Fady', group_id=1), 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 0, 50, 48, 197328), 'raised_to_user': datetime.datetime(2025, 5, 1, 0, 50, 48, 197328), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: can't adapt type 'User'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 29, in add_word
+    conn.execute(stmt)
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) can't adapt type 'User'
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES (%(user_id)s, %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'user_id': User(username='Fady', group_id=1), 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 0, 50, 48, 197328), 'raised_to_user': datetime.datetime(2025, 5, 1, 0, 50, 48, 197328), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-05-01 00:52:22,000 - api-wordManagement - ERROR - Word can be added for the following exception (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Fady"
+LINE 1: ...d_id, last_seen, raised_to_user, quality) VALUES ('Fady', 'H...
+                                                             ^
+
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES (%(user_id)s, %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'user_id': 'Fady', 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 0, 52, 21, 989612), 'raised_to_user': datetime.datetime(2025, 5, 1, 0, 52, 21, 989612), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "Fady"
+LINE 1: ...d_id, last_seen, raised_to_user, quality) VALUES ('Fady', 'H...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 29, in add_word
+    conn.execute(stmt)
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Fady"
+LINE 1: ...d_id, last_seen, raised_to_user, quality) VALUES ('Fady', 'H...
+                                                             ^
+
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES (%(user_id)s, %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'user_id': 'Fady', 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 0, 52, 21, 989612), 'raised_to_user': datetime.datetime(2025, 5, 1, 0, 52, 21, 989612), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-05-01 01:15:09,662 - api-wordManagement - ERROR - Word can be added for the following exception (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'Fady'
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE users_authority.username = %(Fady)s), %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 1401, in _init_compiled
+    compiled.construct_params(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 1947, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'Fady' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 32, in add_word
+    conn.execute(stmt)
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 1401, in _init_compiled
+    compiled.construct_params(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 1947, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'Fady'
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE users_authority.username = %(Fady)s), %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+2025-05-01 01:23:35,283 - api-wordManagement - ERROR - Word can be added for the following exception (psycopg2.errors.DatatypeMismatch) column "raised_to_user" is of type integer but expression is of type timestamp without time zone
+LINE 3: ... 'Hund', '2025-05-01T01:23:35.273591'::timestamp, '2025-05-0...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE users_authority.username = %(username_1)s), %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'username_1': 'Fady', 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 1, 23, 35, 273591), 'raised_to_user': datetime.datetime(2025, 5, 1, 1, 23, 35, 273591), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.DatatypeMismatch: column "raised_to_user" is of type integer but expression is of type timestamp without time zone
+LINE 3: ... 'Hund', '2025-05-01T01:23:35.273591'::timestamp, '2025-05-0...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 32, in add_word
+    conn.execute(stmt)
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.DatatypeMismatch) column "raised_to_user" is of type integer but expression is of type timestamp without time zone
+LINE 3: ... 'Hund', '2025-05-01T01:23:35.273591'::timestamp, '2025-05-0...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+[SQL: INSERT INTO user_words (user_id, word_id, last_seen, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE users_authority.username = %(username_1)s), %(word_id)s, %(last_seen)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'username_1': 'Fady', 'word_id': 'Hund', 'last_seen': datetime.datetime(2025, 5, 1, 1, 23, 35, 273591), 'raised_to_user': datetime.datetime(2025, 5, 1, 1, 23, 35, 273591), 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-05-01 01:52:55,057 - api-wordManagement - ERROR - Word can be added for the following exception (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Fady"
+LINE 3: WHERE user_words.user_id = 'Fady'
+                                   ^
+
+[SQL: SELECT user_words.user_id, user_words.word_id, user_words.last_seen, user_words.raised_to_user, user_words.quality 
+FROM user_words 
+WHERE user_words.user_id = %(user_id_1)s]
+[parameters: {'user_id_1': 'Fady'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "Fady"
+LINE 3: WHERE user_words.user_id = 'Fady'
+                                   ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 49, in get_word_list
+    except Exception as e:
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Fady"
+LINE 3: WHERE user_words.user_id = 'Fady'
+                                   ^
+
+[SQL: SELECT user_words.user_id, user_words.word_id, user_words.last_seen, user_words.raised_to_user, user_words.quality 
+FROM user_words 
+WHERE user_words.user_id = %(user_id_1)s]
+[parameters: {'user_id_1': 'Fady'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-05-01 01:58:20,482 - api-wordManagement - ERROR - Word can be added for the following exception (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Fady"
+LINE 3: WHERE user_words.user_id = 'Fady'
+                                   ^
+
+[SQL: SELECT user_words.user_id, user_words.word_id, user_words.last_seen, user_words.raised_to_user, user_words.quality 
+FROM user_words 
+WHERE user_words.user_id = %(user_id_1)s]
+[parameters: {'user_id_1': 'Fady'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "Fady"
+LINE 3: WHERE user_words.user_id = 'Fady'
+                                   ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 49, in get_word_list
+    except Exception as e:
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Fady"
+LINE 3: WHERE user_words.user_id = 'Fady'
+                                   ^
+
+[SQL: SELECT user_words.user_id, user_words.word_id, user_words.last_seen, user_words.raised_to_user, user_words.quality 
+FROM user_words 
+WHERE user_words.user_id = %(user_id_1)s]
+[parameters: {'user_id_1': 'Fady'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-05-01 02:06:19,802 - api-wordManagement - ERROR - Word can be added for the following exception 'CursorResult' object has no attribute 'MappingResult'
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 49, in get_word_list
+    words_list=conn.execute(stmt).MappingResult
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CursorResult' object has no attribute 'MappingResult'
