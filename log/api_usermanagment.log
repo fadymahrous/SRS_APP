@@ -389,3 +389,234 @@ Traceback (most recent call last):
     words_list=conn.execute(stmt).MappingResult
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'CursorResult' object has no attribute 'MappingResult'
+2025-05-04 11:44:39,666 - api-wordManagement - ERROR - Word can not be added for the following exception Unconsumed column names: last_seen
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 36, in add_word
+    word_already_exist=conn.execute(stmt)
+                       ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 711, in _compile_w_cache
+    compiled_sql = self._compiler(
+                   ^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 320, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 1446, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 886, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 932, in process
+    return obj._compiler_dispatch(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 5843, in visit_insert
+    crud_params_struct = crud._get_crud_params(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\crud.py", line 335, in _get_crud_params
+    raise exc.CompileError(
+sqlalchemy.exc.CompileError: Unconsumed column names: last_seen
+2025-05-04 11:45:57,094 - api-wordManagement - ERROR - Word can not be added for the following exception Unconsumed column names: last_seen
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 36, in add_word
+    word_already_exist=conn.execute(stmt)
+                       ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 711, in _compile_w_cache
+    compiled_sql = self._compiler(
+                   ^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 320, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 1446, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 886, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 932, in process
+    return obj._compiler_dispatch(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 5843, in visit_insert
+    crud_params_struct = crud._get_crud_params(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\crud.py", line 335, in _get_crud_params
+    raise exc.CompileError(
+sqlalchemy.exc.CompileError: Unconsumed column names: last_seen
+2025-05-04 11:47:52,733 - api-wordManagement - ERROR - Word can not be added for the following exception Unconsumed column names: last_seen
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 36, in add_word
+    word_already_exist=conn.execute(stmt)
+                       ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 711, in _compile_w_cache
+    compiled_sql = self._compiler(
+                   ^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 320, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 1446, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 886, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 932, in process
+    return obj._compiler_dispatch(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\compiler.py", line 5843, in visit_insert
+    crud_params_struct = crud._get_crud_params(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\crud.py", line 335, in _get_crud_params
+    raise exc.CompileError(
+sqlalchemy.exc.CompileError: Unconsumed column names: last_seen
+2025-05-04 12:11:26,322 - api-wordManagement - ERROR - Word can not be added for the following exception (psycopg2.errors.ForeignKeyViolation) insert or update on table "user_words" violates foreign key constraint "user_words_word_id_fkey"
+DETAIL:  Key (word_id)=(Katza) is not present in table "wiktionary_de_data".
+
+[SQL: INSERT INTO user_words (user_id, word_id, exercise_date, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE false), %(word_id)s, %(exercise_date)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'word_id': 'Katza', 'exercise_date': datetime.datetime(2025, 5, 4, 12, 11, 26, 308448), 'raised_to_user': 1, 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "user_words" violates foreign key constraint "user_words_word_id_fkey"
+DETAIL:  Key (word_id)=(Katza) is not present in table "wiktionary_de_data".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 36, in add_word
+    word_already_exist=conn.execute(stmt)
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "user_words" violates foreign key constraint "user_words_word_id_fkey"
+DETAIL:  Key (word_id)=(Katza) is not present in table "wiktionary_de_data".
+
+[SQL: INSERT INTO user_words (user_id, word_id, exercise_date, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE false), %(word_id)s, %(exercise_date)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'word_id': 'Katza', 'exercise_date': datetime.datetime(2025, 5, 4, 12, 11, 26, 308448), 'raised_to_user': 1, 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-04 12:24:36,186 - api-wordManagement - ERROR - Word can not be added for the following exception (psycopg2.errors.NotNullViolation) null value in column "user_id" of relation "user_words" violates not-null constraint
+DETAIL:  Failing row contains (null, Katze, null, 2025-05-04, 1, 0).
+
+[SQL: INSERT INTO user_words (user_id, word_id, exercise_date, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE false), %(word_id)s, %(exercise_date)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'word_id': 'Katze', 'exercise_date': datetime.datetime(2025, 5, 4, 12, 23, 54, 128184), 'raised_to_user': 1, 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "user_words" violates not-null constraint
+DETAIL:  Failing row contains (null, Katze, null, 2025-05-04, 1, 0).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 36, in add_word
+    word_already_exist=conn.execute(stmt)
+                       ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\.srs_algorithm\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "user_id" of relation "user_words" violates not-null constraint
+DETAIL:  Failing row contains (null, Katze, null, 2025-05-04, 1, 0).
+
+[SQL: INSERT INTO user_words (user_id, word_id, exercise_date, raised_to_user, quality) VALUES ((SELECT users_authority.user_id 
+FROM users_authority 
+WHERE false), %(word_id)s, %(exercise_date)s, %(raised_to_user)s, %(quality)s)]
+[parameters: {'word_id': 'Katze', 'exercise_date': datetime.datetime(2025, 5, 4, 12, 23, 54, 128184), 'raised_to_user': 1, 'quality': 0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-04 12:39:15,516 - api-wordManagement - ERROR - Failed to fetch word list due to: cannot access local variable 'words_list' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 49, in get_word_list
+    words_list = result.all(words_list)
+                            ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'words_list' where it is not associated with a value
+2025-05-04 12:39:49,045 - api-wordManagement - ERROR - Failed to fetch word list due to: len() takes exactly one argument (0 given)
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 50, in get_word_list
+    number_of_words=len()
+                    ^^^^^
+TypeError: len() takes exactly one argument (0 given)
+2025-05-04 13:03:38,963 - api-wordManagement - ERROR - Failed to fetch word next word due to: 'CursorResult' object has no attribute '_mapping'
+Traceback (most recent call last):
+  File "c:\Users\fadyz\Desktop\Personal\python-mess\SRS\API_Routers\APIs_WordManagement.py", line 61, in get_word_list
+    result=conn.execute(stmt)._mapping.items()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CursorResult' object has no attribute '_mapping'

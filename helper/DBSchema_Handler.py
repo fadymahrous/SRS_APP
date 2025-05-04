@@ -1,5 +1,5 @@
 #Create Tabels File Using Sql Alchemy
-from sqlalchemy import URL,create_engine,MetaData,Column,Table,Integer,String,Date,ForeignKey,TIMESTAMP,insert
+from sqlalchemy import URL,create_engine,MetaData,Column,Table,Integer,String,ForeignKey,TIMESTAMP,insert,Float
 from configparser import ConfigParser
 from pathlib import Path
 import logging
@@ -59,12 +59,13 @@ class DBSchema_Handler:
         self.user_words = Table(
             "user_words",
             metadata_obj,
-            Column("user_id", Integer, ForeignKey("users_authority.user_id")),
-            Column("word_id", String,ForeignKey("wiktionary_de_data.word")),
-            Column("last_seen",Date),
-            Column("raised_to_user",Integer),
-            Column("quality",Integer)
-
+            Column("user_id", Integer, ForeignKey("users_authority.user_id"),nullable=False),
+            Column("word", String,ForeignKey("wiktionary_de_data.word"),nullable=False),
+            Column("quality",Integer),
+            Column("efficiency",Float),
+            Column("interval",Integer),
+            Column("repetition",Integer),
+            Column("exercise_date",TIMESTAMP), 
         )
 
         self.users_authority = Table(

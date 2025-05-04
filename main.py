@@ -6,7 +6,6 @@ from API_Routers.APIs_UserManagement import router as router_usermanager
 from API_Routers.APIs_SecureLogin import router as router_securelogin
 from API_Routers.APIs_WordManagement import router as router_wordmanagment
 from fastapi import Depends, FastAPI
-from typing_extensions import Annotated
 from helper.DBSchema_Handler import DBSchema_Handler
 
 class User(BaseModel):
@@ -17,6 +16,10 @@ class User(BaseModel):
 
 class UserInDB(User):
     hashed_password: str
+
+""" Create missing tables"""
+db_handle=DBSchema_Handler()
+db_handle.createschema()
 
 """Create FaseApi Object"""
 app=FastAPI(title="Word Interogation")
@@ -32,8 +35,7 @@ def read_root():
 def main()->None:
     """Clean Wiktionary data,For time Being i will do it manually"""
     """Create databse schema and add any msissing table"""
-    db_handle=DBSchema_Handler()
-    db_handle.createschema()
+    ...
 
 if __name__=='__main__':
     main()
